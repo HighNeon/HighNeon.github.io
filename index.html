@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristian Murillo – Portafolio</title>
+    <meta name="description" content="Portafolio de Cristian Murillo – Ingeniería Electrónica, IoT, Automatización y Desarrollo Web.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── NAVEGACIÓN ── -->
+<nav class="main-nav">
+    <div class="container">
+        <div class="nav-content">
+            <div class="logo">Cristian Murillo</div>
+            <div class="nav-menu">
+                <a href="#inicio"    class="nav-link active">Inicio</a>
+                <a href="#about"     class="nav-link">About</a>
+                <a href="#service"   class="nav-link">Service</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contacto"  class="nav-link">Contacto</a>
+            </div>
+            <div class="nav-right">
+                <!-- 🔴 Reemplaza el href con el link real a tu CV en Google Drive -->
+                <a href="https://drive.google.com/your-cv-link" target="_blank" rel="noopener noreferrer" class="nav-cv">
+                    CV <i class="fas fa-external-link-alt"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+
+    <!-- ── INICIO ── -->
+    <section id="inicio" class="section inicio-section">
+        <div class="inicio-content">
+            <h1 class="main-title">Cristian Murillo</h1>
+            <p class="inicio-subtitle">Ingeniería Electrónica · IoT · Automatización · Desarrollo Web</p>
+            <div class="title-separator"></div>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- ── ABOUT ── -->
+    <section id="about" class="section about-section">
+        <h2 class="section-title">About</h2>
+        <div class="about-content">
+            <p>Soy estudiante de Ingeniería Electrónica con pasión por construir soluciones que conecten el mundo físico con el digital. Me especializo en sistemas embebidos, automatización industrial y desarrollo web, buscando siempre integrar hardware y software de forma eficiente y creativa.</p>
+            <p>He trabajado en proyectos que van desde robots autónomos de siembra, bots de automatización en Python, diseño 3D en SolidWorks y Blender, hasta programación de PLCs Siemens y sistemas IoT con Arduino. Cada proyecto es una oportunidad de aprender y dejar huella.</p>
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- ── SERVICE ── -->
+    <section id="service" class="section service-section">
+        <h2 class="section-title">Service</h2>
+        <div class="services-grid">
+
+            <div class="service-card">
+                <div class="service-header"><h3 class="service-card-title">IoT & Embedded Systems</h3></div>
+                <div class="service-content">
+                    <p>Diseño e implementación de sistemas IoT con Arduino, ESP32 y módulos de comunicación Bluetooth/WiFi. Integración de sensores, actuadores y lógica de control en tiempo real.</p>
+                    <div class="iot-tag">1@T</div>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-header"><h3 class="service-card-title">Web Developer</h3></div>
+                <div class="service-content">
+                    <p>Desarrollo de sitios y aplicaciones web con HTML, CSS y JavaScript. Implementación de temas personalizados en WordPress y automatización de tareas con Python.</p>
+                </div>
+            </div>
+
+            <div class="service-card">
+                <div class="service-header"><h3 class="service-card-title">Industrial Automation</h3></div>
+                <div class="service-content">
+                    <p>Programación de PLCs Siemens en TIA Portal (Ladder, Structured Text). Diseño de estaciones de prueba, control proporcional y sistemas de automatización industrial.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- ── PORTFOLIO ── -->
+    <section id="portfolio" class="section portfolio-section">
+        <h2 class="section-title">Portfolio</h2>
+
+        <div class="portfolio-filters">
+            <button class="filter-btn active" data-filter="all">Todos</button>
+            <button class="filter-btn" data-filter="robotica">Robótica</button>
+            <button class="filter-btn" data-filter="iot">IoT</button>
+            <button class="filter-btn" data-filter="plc">PLC</button>
+            <button class="filter-btn" data-filter="3d">Diseño 3D</button>
+            <button class="filter-btn" data-filter="web">Web & Software</button>
+            <button class="filter-btn" data-filter="academico">Académico</button>
+        </div>
+
+        <div class="portfolio-grid">
+
+            <div class="portfolio-card" data-category="robotica" data-modal="modal-walle">
+                <div class="portfolio-card-img" style="background:linear-gradient(135deg,#FA5700,#C75F28)"><i class="fas fa-robot portfolio-icon"></i></div>
+                <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Robótica</span>
+                    <h3>WALL-E – Carro de Siembra Automatizado</h3>
+                    <p>Robot autónomo multicultivo con sistema de control embebido.</p>
+                    <span class="card-cta">Ver proyecto <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="web" data-modal="modal-bot">
+                <div class="portfolio-card-img" style="background:linear-gradient(135deg,#25D366,#128C7E)"><i class="fab fa-whatsapp portfolio-icon"></i></div>
+                <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Web & Software</span>
+                    <h3>Bot de WhatsApp</h3>
+                    <p>Automatización de mensajería con Python y PyWhatKit.</p>
+                    <span class="card-cta">Ver proyecto <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="iot" data-modal="modal-control">
+                <div class="portfolio-card-img" style="background:linear-gradient(135deg,#4A90D9,#2C5F8A)"><i class="fas fa-wave-square portfolio-icon"></i></div>
+                <div class="portfolio-card-body">
+                    <span class="portfolio-tag">IoT</span>
+                    <h3>Control Proporcional</h3>
+                    <p>Simulación y diseño de controlador P en Proteus.</p>
+                    <span class="card-cta">Ver proyecto <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="3d" data-modal="modal-dinamico">
+                <div class="portfolio-card-img" style="background:linear-gradient(135deg,#9B59B6,#6C3483)"><i class="fas fa-cogs portfolio-icon"></i></div>
+                <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Diseño 3D</span>
+                    <h3>Sistema Dinámico</h3>
+                    <p>Ensamblaje mecánico con motores DC modelado en SolidWorks.</p>
+                    <span class="card-cta">Ver proyecto <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="3d" data-modal="modal-blender">
+                <div class="portfolio-card-img" style="background:linear-gradient(135deg,#E67E22,#D35400)"><i class="fas fa-cube portfolio-icon"></i></div>
+                <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Diseño 3D</span>
+                    <h3>Renders & Animaciones en Blender</h3>
+                    <p>Modelado y animación 3D de proyectos de ingeniería.</p>
+                    <span class="card-cta">Ver proyecto <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="iot" data-modal="modal-iot">
+                <div class="portfolio-card-img" style="background:linear-gradient(135deg,#1ABC9C,#16A085)"><i class="fas fa-microchip portfolio-icon"></i></div>
+                <div class="portfolio-card-body">
+                    <span class="portfolio-tag">IoT</span>
+                    <h3>Manual IoT – Proyectos Básicos</h3>
+                    <p>Documentación técnica Arduino con módulos HC-05.</p>
+                    <span class="card-cta">Ver proyecto <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="academico" data-modal="modal-congreso">
+                <div class="portfolio-card-img" style="background:linear-gradient(135deg,#2980B9,#1F618D)"><i class="fas fa-graduation-cap portfolio-icon"></i></div>
+                <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Académico</span>
+                    <h3>III Congreso ETITC</h3>
+                    <p>Ponencia y memorias del congreso académico institucional.</p>
+                    <span class="card-cta">Ver proyecto <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="iot" data-modal="modal-giro">
+                <div class="portfolio-card-img" style="background:linear-gradient(135deg,#E74C3C,#922B21)"><i class="fas fa-tachometer-alt portfolio-icon"></i></div>
+                <div class="portfolio-card-body">
+                    <span class="portfolio-tag">IoT</span>
+                    <h3>Control de Giro y Velocidad</h3>
+                    <p>Módulo de control para motor DC bidireccional con PWM.</p>
+                    <span class="card-cta">Ver proyecto <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="plc" data-modal="modal-redes">
+                <div class="portfolio-card-img" style="background:linear-gradient(135deg,#27AE60,#1E8449)"><i class="fas fa-network-wired portfolio-icon"></i></div>
+                <div class="portfolio-card-body">
+                    <span class="portfolio-tag">PLC</span>
+                    <h3>Proyecto Redes y Automatización</h3>
+                    <p>Integración de redes industriales y sistemas de automatización.</p>
+                    <span class="card-cta">Ver proyecto <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="plc" data-modal="modal-tia1">
+                <div class="portfolio-card-img" style="background:linear-gradient(135deg,#F39C12,#D68910)"><i class="fas fa-industry portfolio-icon"></i></div>
+                <div class="portfolio-card-body">
+                    <span class="portfolio-tag">PLC</span>
+                    <h3>PLC Siemens – Proyecto Redes</h3>
+                    <p>Programación en TIA Portal con lógica Ladder.</p>
+                    <span class="card-cta">Ver proyecto <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="plc" data-modal="modal-testing">
+                <div class="portfolio-card-img" style="background:linear-gradient(135deg,#8E44AD,#6C3483)"><i class="fas fa-flask portfolio-icon"></i></div>
+                <div class="portfolio-card-body">
+                    <span class="portfolio-tag">PLC</span>
+                    <h3>Testing Stations 11</h3>
+                    <p>Estación de pruebas automatizada en TIA Portal Siemens.</p>
+                    <span class="card-cta">Ver proyecto <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+            <div class="portfolio-card" data-category="academico" data-modal="modal-lightyear">
+                <div class="portfolio-card-img" style="background:linear-gradient(135deg,#17A589,#0E6655)"><i class="fas fa-rocket portfolio-icon"></i></div>
+                <div class="portfolio-card-body">
+                    <span class="portfolio-tag">Académico</span>
+                    <h3>Proyecto Lightyear – PEU-MC2025</h3>
+                    <p>Proyecto integrador de ingeniería con enfoque en control avanzado.</p>
+                    <span class="card-cta">Ver proyecto <i class="fas fa-arrow-right"></i></span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="section-separator"></div>
+
+    <!-- ── CONTACTO ── -->
+    <section id="contacto" class="section contact-section">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-content">
+            <p>¿Tienes un proyecto en mente o quieres colaborar? Escríbeme, estoy siempre abierto a nuevos retos.</p>
+            <div class="contact-info">
+                <!-- 🔴 Reemplaza con tus datos reales -->
+                <div class="contact-item"><i class="fas fa-envelope"></i><span>correo@ejemplo.com</span></div>
+                <div class="contact-item"><i class="fas fa-phone"></i><span>+57 300 000 0000</span></div>
+                <div class="contact-item"><i class="fab fa-linkedin"></i><span>linkedin.com/in/cristian-murillo</span></div>
+                <div class="contact-item"><i class="fab fa-github"></i><span>github.com/cristian-murillo</span></div>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <p>&copy; <span id="year"></span> Cristian Murillo. Todos los derechos reservados.
+    <em>"Coming soon: patentes y derechos de algo..."</em></p>
+</footer>
+
+<!-- ── MODALES ── -->
+<div class="modal-overlay" id="modal-walle">
+    <div class="modal-box">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <span class="portfolio-tag">Robótica / Mecatrónica</span>
+        <h2 class="modal-title">WALL-E – Carro de Siembra Automatizado Multicultivo</h2>
+        <p class="modal-desc">Diseño y construcción de un robot autónomo capaz de realizar siembra de múltiples cultivos de forma automatizada. El sistema integra sensores para detección de terreno, actuadores para depósito de semillas y un módulo de control embebido que gestiona la trayectoria y profundidad de siembra. Documentado en dos entregas académicas con análisis de requerimientos, diseño de hardware y validación del sistema.</p>
+        <div class="modal-tags"><span class="modal-tech-tag">Arduino</span><span class="modal-tech-tag">Sensores</span><span class="modal-tech-tag">Actuadores</span><span class="modal-tech-tag">Robótica</span><span class="modal-tech-tag">Control Embebido</span></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-bot">
+    <div class="modal-box">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <span class="portfolio-tag">Web & Software</span>
+        <h2 class="modal-title">Bot de WhatsApp – Automatización con Python</h2>
+        <p class="modal-desc">Desarrollo de un bot de mensajería automatizada para WhatsApp utilizando Python y la librería PyWhatKit. Incluye tres variantes: envío programado de mensajes, envío aleatorio a múltiples contactos, y mensajería por grupos. Configurado con entorno virtual (venv) para gestión de dependencias.</p>
+        <div class="modal-tags"><span class="modal-tech-tag">Python</span><span class="modal-tech-tag">PyWhatKit</span><span class="modal-tech-tag">Automatización</span><span class="modal-tech-tag">WhatsApp</span><span class="modal-tech-tag">venv</span></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-control">
+    <div class="modal-box">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <span class="portfolio-tag">Electrónica / Control</span>
+        <h2 class="modal-title">Control Proporcional – Simulación en Proteus</h2>
+        <p class="modal-desc">Diseño e implementación de un controlador proporcional (P) en simulación usando Proteus. El proyecto incluye el análisis de la función de transferencia del sistema, cálculo de la ganancia proporcional y validación del comportamiento en régimen transitorio y estacionario.</p>
+        <div class="modal-tags"><span class="modal-tech-tag">Proteus</span><span class="modal-tech-tag">Control P</span><span class="modal-tech-tag">Sistemas Dinámicos</span><span class="modal-tech-tag">Electrónica</span></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-dinamico">
+    <div class="modal-box">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <span class="portfolio-tag">Diseño 3D / Mecánica</span>
+        <h2 class="modal-title">Sistema Dinámico – Modelado 3D en SolidWorks</h2>
+        <p class="modal-desc">Modelado y ensamblaje de un sistema mecánico dinámico en SolidWorks, compuesto por motores DC, ejes de transmisión, rotores, base estructural y elementos de unión. Exportado en formatos STL y Parasolid (.x_t) para análisis y fabricación. Incluye simulación de movimiento del ensamblaje.</p>
+        <div class="modal-tags"><span class="modal-tech-tag">SolidWorks</span><span class="modal-tech-tag">CAD 3D</span><span class="modal-tech-tag">Ensamblaje</span><span class="modal-tech-tag">STL</span><span class="modal-tech-tag">Motores DC</span></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-blender">
+    <div class="modal-box">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <span class="portfolio-tag">Diseño 3D / Animación</span>
+        <h2 class="modal-title">Renders & Animaciones 3D en Blender</h2>
+        <p class="modal-desc">Creación de renders fotorrealistas y animaciones de proyectos de ingeniería usando Blender. Las piezas fueron modeladas con técnicas de subdivisión, texturizado PBR e iluminación de estudio. Se generaron videos de presentación para socialización académica de proyectos.</p>
+        <div class="modal-tags"><span class="modal-tech-tag">Blender</span><span class="modal-tech-tag">Render</span><span class="modal-tech-tag">Animación 3D</span><span class="modal-tech-tag">Modelado</span><span class="modal-tech-tag">PBR</span></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-iot">
+    <div class="modal-box">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <span class="portfolio-tag">IoT / Arduino</span>
+        <h2 class="modal-title">Manual IoT – Proyectos Básicos con Arduino y HC-05</h2>
+        <p class="modal-desc">Documentación técnica y manual de usuario para dos proyectos IoT con Arduino Uno y módulos HC-05: control de LED mediante app móvil Bluetooth, y configuración maestro-esclavo de módulos HC-05 por comandos AT. Presentado en 14 diapositivas con capturas de código, diagramas y evidencias.</p>
+        <div class="modal-tags"><span class="modal-tech-tag">Arduino</span><span class="modal-tech-tag">HC-05</span><span class="modal-tech-tag">Bluetooth</span><span class="modal-tech-tag">IoT</span></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-congreso">
+    <div class="modal-box">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <span class="portfolio-tag">Académico</span>
+        <h2 class="modal-title">III Congreso ETITC – Memorias Académicas</h2>
+        <p class="modal-desc">Participación en el III Congreso de la Escuela Tecnológica Instituto Técnico Central (ETITC). Presentación de memorias técnicas y ponencias relacionadas con proyectos de ingeniería electrónica y automatización desarrollados en el programa académico.</p>
+        <div class="modal-tags"><span class="modal-tech-tag">ETITC</span><span class="modal-tech-tag">Congreso</span><span class="modal-tech-tag">Académico</span><span class="modal-tech-tag">Ponencia</span></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-giro">
+    <div class="modal-box">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <span class="portfolio-tag">Electrónica / Embebidos</span>
+        <h2 class="modal-title">Módulo de Control de Giro y Velocidad de Motor DC</h2>
+        <p class="modal-desc">Diseño de un módulo de control para regular la dirección de giro y la velocidad de un motor DC. Implementado con PWM y circuito puente H para control bidireccional. Presentado con análisis de circuito, pruebas experimentales y resultados.</p>
+        <div class="modal-tags"><span class="modal-tech-tag">Motor DC</span><span class="modal-tech-tag">PWM</span><span class="modal-tech-tag">Puente H</span><span class="modal-tech-tag">Arduino</span><span class="modal-tech-tag">Control</span></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-redes">
+    <div class="modal-box">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <span class="portfolio-tag">PLC / Redes</span>
+        <h2 class="modal-title">Proyecto Redes y Automatización Industrial</h2>
+        <p class="modal-desc">Integración de redes industriales con sistemas de automatización. El proyecto aborda la configuración de comunicaciones entre dispositivos de campo y PLCs, protocolos industriales y diseño de arquitecturas de red para entornos productivos.</p>
+        <div class="modal-tags"><span class="modal-tech-tag">Redes Industriales</span><span class="modal-tech-tag">PLC</span><span class="modal-tech-tag">Automatización</span><span class="modal-tech-tag">Protocolos</span></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-tia1">
+    <div class="modal-box">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <span class="portfolio-tag">PLC / Siemens</span>
+        <h2 class="modal-title">PLC Siemens – Programación en TIA Portal (Redes)</h2>
+        <p class="modal-desc">Programación de PLC Siemens en TIA Portal para un proyecto de redes industriales. Incluye lógica en Ladder y configuración de comunicaciones entre estaciones. El proyecto fue desarrollado con Step 7 y validado en simulación antes de su implementación.</p>
+        <div class="modal-tags"><span class="modal-tech-tag">TIA Portal</span><span class="modal-tech-tag">Siemens</span><span class="modal-tech-tag">Ladder</span><span class="modal-tech-tag">PLC</span><span class="modal-tech-tag">Step 7</span></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-testing">
+    <div class="modal-box">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <span class="portfolio-tag">PLC / Siemens</span>
+        <h2 class="modal-title">Testing Stations 11 – Estación de Pruebas Automatizada</h2>
+        <p class="modal-desc">Diseño y programación de una estación de pruebas automatizada usando TIA Portal de Siemens. La estación gestiona ciclos de verificación secuencial de componentes industriales, con detección de fallas y señalización de estado.</p>
+        <div class="modal-tags"><span class="modal-tech-tag">TIA Portal</span><span class="modal-tech-tag">Siemens</span><span class="modal-tech-tag">Testing</span><span class="modal-tech-tag">PLC</span><span class="modal-tech-tag">Automatización</span></div>
+    </div>
+</div>
+
+<div class="modal-overlay" id="modal-lightyear">
+    <div class="modal-box">
+        <button class="modal-close"><i class="fas fa-times"></i></button>
+        <span class="portfolio-tag">Ingeniería / Académico</span>
+        <h2 class="modal-title">Proyecto Lightyear – PEU-MC2025</h2>
+        <p class="modal-desc">Proyecto integrador de ingeniería desarrollado en el marco del PEU-MC2025 (Proyecto de Énfasis Universitario – Mecatrónica y Control). Aborda el diseño de un sistema de control avanzado con enfoque en aplicaciones reales de la industria.</p>
+        <div class="modal-tags"><span class="modal-tech-tag">Mecatrónica</span><span class="modal-tech-tag">Control</span><span class="modal-tech-tag">PEU</span><span class="modal-tech-tag">Sistemas</span><span class="modal-tech-tag">Integrador</span></div>
+    </div>
+</div>
+
+<script>
+/* ── Año dinámico ── */
+document.getElementById('year').textContent = new Date().getFullYear();
+
+/* ── Navegación suave ── */
+document.querySelectorAll('.nav-link').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+        this.classList.add('active');
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+    });
+});
+
+window.addEventListener('scroll', () => {
+    let current = '';
+    document.querySelectorAll('section').forEach(s => {
+        if (scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
+    });
+    document.querySelectorAll('.nav-link').forEach(l => {
+        l.classList.remove('active');
+        if (l.getAttribute('href') === '#' + current) l.classList.add('active');
+    });
+});
+
+/* ── Filtros portfolio ── */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        const filter = this.dataset.filter;
+        document.querySelectorAll('.portfolio-card').forEach(card => {
+            const show = filter === 'all' || card.dataset.category === filter;
+            card.style.display = show ? 'flex' : 'none';
+            if (show) { card.style.animation = 'none'; void card.offsetWidth; card.style.animation = 'fadeInUp 0.4s ease'; }
+        });
+    });
+});
+
+/* ── Modales ── */
+document.querySelectorAll('.portfolio-card').forEach(card => {
+    card.addEventListener('click', () => {
+        const modal = document.getElementById(card.dataset.modal);
+        if (modal) { modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    });
+});
+
+document.querySelectorAll('.modal-close, .modal-overlay').forEach(el => {
+    el.addEventListener('click', function(e) {
+        if (e.target === this) {
+            document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('open'));
+            document.body.style.overflow = '';
+        }
+    });
+});
+
+document.querySelectorAll('.modal-box').forEach(box => box.addEventListener('click', e => e.stopPropagation()));
+
+document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('open'));
+        document.body.style.overflow = '';
+    }
+});
+</script>
+
+</body>
+</html>

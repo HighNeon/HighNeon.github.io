@@ -1,0 +1,179 @@
+/*
+Theme Name: Portafolio Cristian Murillo
+Author: Cristian Murillo
+Description: Portafolio personal - IoT & Soluciones Web
+Version: 2.0
+Text Domain: portafolio-cm
+*/
+
+/* ── Reset ── */
+* { margin:0; padding:0; box-sizing:border-box; font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; }
+
+body { background-color:#1a1a1a; color:#fff; line-height:1.6; padding-top:80px; }
+
+.container { max-width:1200px; margin:0 auto; padding:0 20px; }
+.section { padding:60px 0; }
+.section-title { font-size:2rem; color:#fff; margin-bottom:30px; font-weight:600; }
+.section-separator { height:1px; background-color:#945A3B; margin:0; }
+
+/* ── Navegación ── */
+.main-nav {
+    position:fixed; top:0; left:0; width:100%;
+    background-color:rgba(26,26,26,0.95);
+    box-shadow:0 2px 10px rgba(0,0,0,0.3);
+    z-index:1000; padding:15px 0;
+    backdrop-filter:blur(10px);
+}
+.nav-content { display:flex; justify-content:space-between; align-items:center; }
+.logo { font-size:1.5rem; font-weight:700; color:#fff; }
+.nav-menu { display:flex; gap:30px; }
+.nav-link { text-decoration:none; color:#e0e0e0; font-weight:500; font-size:1rem; transition:color .3s; position:relative; padding:5px 0; }
+.nav-link:hover { color:#FA5700; }
+.nav-link.active { color:#fff; font-weight:600; }
+.nav-link.active::after { content:''; position:absolute; bottom:0; left:0; width:100%; height:2px; background:#FA5700; }
+.nav-right { display:flex; gap:20px; align-items:center; }
+.nav-cv {
+    text-decoration:none; color:#fff; font-weight:600; font-size:0.9rem;
+    background:#FA5700; padding:7px 18px; border-radius:20px;
+    transition:all .3s; display:flex; align-items:center; gap:6px;
+}
+.nav-cv:hover { background:#C75F28; transform:translateY(-2px); box-shadow:0 4px 12px rgba(250,87,0,0.4); }
+
+/* ── Hero / Inicio ── */
+.inicio-section {
+    text-align:center; padding:150px 0; position:relative; overflow:hidden;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+               url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=2070&q=80');
+    background-size:cover; background-position:center; background-attachment:fixed;
+    border-radius:0 0 20px 20px; margin-bottom:40px;
+}
+.inicio-section::before {
+    content:''; position:absolute; top:0; left:0; width:100%; height:100%;
+    background:radial-gradient(circle at 20% 30%,rgba(250,87,0,0.1) 0%,transparent 50%),
+               radial-gradient(circle at 80% 70%,rgba(199,95,40,0.1) 0%,transparent 50%);
+    z-index:1;
+}
+.inicio-content { position:relative; z-index:2; }
+.main-title { font-size:3.5rem; font-weight:700; color:#fff; margin-bottom:20px; letter-spacing:-1px; text-shadow:2px 2px 4px rgba(0,0,0,0.5); }
+.inicio-subtitle { font-size:1.1rem; color:#e0e0e0; margin-bottom:25px; text-shadow:1px 1px 2px rgba(0,0,0,0.5); }
+.title-separator { width:80px; height:3px; background:#FA5700; margin:0 auto; }
+
+/* ── About ── */
+.about-content { font-size:1.1rem; color:#e0e0e0; line-height:1.8; max-width:800px; }
+.about-content p { margin-bottom:20px; }
+
+/* ── Services ── */
+.services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; margin-top:20px; }
+.service-card { background:#2d2d2d; border-radius:8px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.3); transition:transform .3s,box-shadow .3s; border:1px solid #3d3d3d; }
+.service-card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(250,87,0,0.2); border-color:#FA5700; }
+.service-header { background:#FA5700; color:#fff; padding:20px; text-align:center; }
+.service-card-title { font-size:1.3rem; font-weight:600; margin:0; }
+.service-content { padding:25px; text-align:center; }
+.service-content p { color:#e0e0e0; margin-bottom:15px; font-size:1rem; }
+.iot-tag { display:inline-block; background:#C75F28; color:#fff; padding:5px 15px; border-radius:20px; font-weight:600; font-size:0.9rem; }
+
+/* ── Portfolio: Filtros ── */
+.portfolio-filters { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:35px; }
+.filter-btn {
+    padding:8px 20px; border:2px solid #3d3d3d; background:transparent;
+    color:#e0e0e0; border-radius:25px; cursor:pointer; font-size:0.9rem;
+    font-weight:500; transition:all .3s;
+}
+.filter-btn:hover { border-color:#FA5700; color:#FA5700; }
+.filter-btn.active { background:#FA5700; border-color:#FA5700; color:#fff; }
+
+/* ── Portfolio: Grid ── */
+.portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:25px; }
+
+.portfolio-card {
+    background:#2d2d2d; border-radius:12px; overflow:hidden;
+    border:1px solid #3d3d3d; cursor:pointer;
+    transition:transform .3s,box-shadow .3s,border-color .3s;
+    display:flex; flex-direction:column;
+    animation:fadeInUp 0.4s ease;
+}
+.portfolio-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(250,87,0,0.2); border-color:#FA5700; }
+
+.portfolio-card-img {
+    height:130px; display:flex; align-items:center;
+    justify-content:center; flex-shrink:0;
+}
+.portfolio-icon { font-size:3rem; color:rgba(255,255,255,0.9); }
+
+.portfolio-card-body { padding:20px; flex:1; display:flex; flex-direction:column; }
+.portfolio-tag {
+    display:inline-block; background:rgba(250,87,0,0.15); color:#FA5700;
+    border:1px solid rgba(250,87,0,0.3); padding:3px 10px;
+    border-radius:12px; font-size:0.75rem; font-weight:600;
+    margin-bottom:10px; width:fit-content;
+}
+.portfolio-card-body h3 { font-size:1rem; color:#fff; margin-bottom:8px; line-height:1.4; }
+.portfolio-card-body p { color:#aaa; font-size:0.9rem; flex:1; }
+.card-cta { color:#FA5700; font-size:0.85rem; font-weight:600; margin-top:12px; display:block; }
+
+/* ── Modales ── */
+.modal-overlay {
+    display:none; position:fixed; inset:0;
+    background:rgba(0,0,0,0.75); z-index:2000;
+    align-items:center; justify-content:center; padding:20px;
+    backdrop-filter:blur(4px);
+}
+.modal-overlay.open { display:flex; }
+
+.modal-box {
+    background:#2d2d2d; border-radius:16px; padding:40px;
+    max-width:650px; width:100%; position:relative;
+    border:1px solid #3d3d3d; max-height:90vh; overflow-y:auto;
+    animation:modalIn 0.3s ease;
+}
+.modal-close {
+    position:absolute; top:15px; right:15px;
+    background:rgba(255,255,255,0.1); border:none; color:#fff;
+    width:35px; height:35px; border-radius:50%; cursor:pointer;
+    font-size:1rem; transition:background .2s; display:flex; align-items:center; justify-content:center;
+}
+.modal-close:hover { background:#FA5700; }
+.modal-title { font-size:1.4rem; color:#fff; margin:15px 0 15px; line-height:1.4; }
+.modal-desc { color:#ccc; line-height:1.8; font-size:1rem; margin-bottom:20px; }
+.modal-tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:20px; }
+.modal-tech-tag { background:#1a1a1a; color:#FA5700; border:1px solid #FA5700; padding:4px 12px; border-radius:12px; font-size:0.8rem; font-weight:500; }
+.modal-doc-note { color:#888; font-size:0.85rem; border-top:1px solid #3d3d3d; padding-top:15px; }
+.modal-doc-note i { color:#FA5700; margin-right:6px; }
+
+/* ── Contacto ── */
+.contact-content { text-align:center; }
+.contact-content p { font-size:1.1rem; color:#e0e0e0; margin-bottom:30px; max-width:600px; margin-left:auto; margin-right:auto; }
+.contact-info { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:30px; }
+.contact-item { display:flex; align-items:center; gap:10px; font-size:1rem; color:#fff; background:#2d2d2d; padding:15px 25px; border-radius:8px; transition:all .3s; }
+.contact-item:hover { background:#3d3d3d; transform:translateY(-3px); box-shadow:0 5px 15px rgba(250,87,0,0.2); }
+.contact-item i { color:#FA5700; font-size:1.2rem; }
+
+/* ── Footer ── */
+footer { text-align:center; padding:30px 0; color:#945A3B; font-size:0.9rem; border-top:1px solid #3d3d3d; margin-top:30px; background:#2d2d2d; border-radius:20px 20px 0 0; }
+
+/* ── Animaciones ── */
+@keyframes fadeInUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
+@keyframes modalIn  { from { opacity:0; transform:scale(0.92); } to { opacity:1; transform:scale(1); } }
+
+/* ── Responsive ── */
+@media (max-width:992px) {
+    .services-grid { grid-template-columns:repeat(2,1fr); }
+    .portfolio-grid { grid-template-columns:repeat(2,1fr); }
+    .main-title { font-size:2.8rem; }
+    .nav-content { flex-direction:column; gap:15px; }
+    .nav-menu { order:3; flex-wrap:wrap; justify-content:center; }
+    .inicio-section { padding:120px 0; background-attachment:scroll; }
+}
+@media (max-width:768px) {
+    .services-grid, .portfolio-grid { grid-template-columns:1fr; }
+    .main-title { font-size:2.3rem; }
+    .section { padding:40px 0; }
+    .contact-info { flex-direction:column; gap:15px; }
+    .modal-box { padding:25px; }
+}
+@media (max-width:576px) {
+    .nav-menu { flex-direction:column; align-items:center; gap:10px; }
+    .main-title { font-size:2rem; }
+    .portfolio-filters { gap:8px; }
+    .filter-btn { padding:6px 14px; font-size:0.8rem; }
+}
