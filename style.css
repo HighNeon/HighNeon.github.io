@@ -83,33 +83,36 @@ body { background-color:#1a1a1a; color:#fff; line-height:1.6; padding-top:80px; 
 .filter-btn.active { background:#FA5700; border-color:#FA5700; color:#fff; }
 
 /* ── Portfolio: Grid ── */
-.portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:25px; }
+.portfolio-grid, .Portafolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:25px; }
 
-.portfolio-card {
+.portfolio-card, .Portafolio-card {
     background:#2d2d2d; border-radius:12px; overflow:hidden;
     border:1px solid #3d3d3d; cursor:pointer;
     transition:transform .3s,box-shadow .3s,border-color .3s;
     display:flex; flex-direction:column;
     animation:fadeInUp 0.4s ease;
 }
-.portfolio-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(250,87,0,0.2); border-color:#FA5700; }
+.portfolio-card:hover, .Portafolio-card:hover { transform:translateY(-6px); box-shadow:0 12px 30px rgba(250,87,0,0.2); border-color:#FA5700; }
 
-.portfolio-card-img {
+.portfolio-card-img, .Portafolio-card-img {
     height:130px; display:flex; align-items:center;
     justify-content:center; flex-shrink:0;
 }
-.portfolio-icon { font-size:3rem; color:rgba(255,255,255,0.9); }
+.portfolio-icon, .Portafolio-icon { font-size:3rem; color:rgba(255,255,255,0.9); }
 
-.portfolio-card-body { padding:20px; flex:1; display:flex; flex-direction:column; }
-.portfolio-tag {
+.portfolio-card-body, .Portafolio-card-body { padding:20px; flex:1; display:flex; flex-direction:column; }
+.portfolio-tag, .Portafolio-tag {
     display:inline-block; background:rgba(250,87,0,0.15); color:#FA5700;
     border:1px solid rgba(250,87,0,0.3); padding:3px 10px;
     border-radius:12px; font-size:0.75rem; font-weight:600;
     margin-bottom:10px; width:fit-content;
 }
-.portfolio-card-body h3 { font-size:1rem; color:#fff; margin-bottom:8px; line-height:1.4; }
-.portfolio-card-body p { color:#aaa; font-size:0.9rem; flex:1; }
+.portfolio-card-body h3, .Portafolio-card-body h3 { font-size:1rem; color:#fff; margin-bottom:8px; line-height:1.4; }
+.portfolio-card-body p, .Portafolio-card-body p { color:#aaa; font-size:0.9rem; flex:1; }
 .card-cta { color:#FA5700; font-size:0.85rem; font-weight:600; margin-top:12px; display:block; }
+
+/* ── Portfolio: Filtros ── */
+.portfolio-filters, .Portafolio-filters { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:35px; }
 
 /* ── Modales ── */
 .modal-overlay {
@@ -173,10 +176,7 @@ footer { text-align:center; padding:30px 0; color:#945A3B; font-size:0.9rem; bor
 /* ── Responsive ── */
 @media (max-width:768px) {
     body { padding-top:65px; }
-
     .nav-hamburger { display:flex; }
-
-    /* Menú oculto por defecto en móvil */
     .nav-menu {
         display:none; flex-direction:column; align-items:center; gap:0;
         position:absolute; top:100%; left:0; width:100%;
@@ -185,17 +185,11 @@ footer { text-align:center; padding:30px 0; color:#945A3B; font-size:0.9rem; bor
         box-shadow:0 8px 20px rgba(0,0,0,0.4);
     }
     .nav-menu.open { display:flex; }
-
-    .nav-link {
-        width:100%; text-align:center;
-        padding:12px 0; font-size:1rem; border-bottom:1px solid #2d2d2d;
-    }
+    .nav-link { width:100%; text-align:center; padding:12px 0; font-size:1rem; border-bottom:1px solid #2d2d2d; }
     .nav-link:last-child { border-bottom:none; }
     .nav-link.active::after { display:none; }
-
     .nav-cv { font-size:0.85rem; padding:6px 14px; }
-
-    .services-grid, .portfolio-grid { grid-template-columns:1fr; }
+    .services-grid, .portfolio-grid, .Portafolio-grid, .servicioss-grid { grid-template-columns:1fr; }
     .main-title { font-size:2.2rem; }
     .section { padding:40px 0; }
     .contact-info { flex-direction:column; gap:15px; }
@@ -217,4 +211,51 @@ footer { text-align:center; padding:30px 0; color:#945A3B; font-size:0.9rem; bor
     .filter-btn { padding:5px 12px; font-size:0.78rem; }
     .modal-box { padding:20px; }
     .modal-title { font-size:1.2rem; }
+}
+
+/* ── Servicios: 4 tarjetas (2x2) ── */
+.servicioss-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:30px; margin-top:20px; }
+.servicios-card { background:#2d2d2d; border-radius:8px; overflow:hidden; box-shadow:0 5px 15px rgba(0,0,0,0.3); transition:transform .3s,box-shadow .3s; border:1px solid #3d3d3d; }
+.servicios-card:hover { transform:translateY(-5px); box-shadow:0 10px 25px rgba(250,87,0,0.2); border-color:#FA5700; }
+.servicios-header { background:#FA5700; color:#fff; padding:20px; text-align:center; }
+.servicios-card-title { font-size:1.3rem; font-weight:600; margin:0; }
+.servicios-content { padding:25px; text-align:center; }
+.servicios-content p { color:#e0e0e0; margin-bottom:15px; font-size:1rem; }
+
+/* ── Modal: links de recursos ── */
+.modal-links { margin-top:20px; border-top:1px solid #3d3d3d; padding-top:18px; }
+.modal-links-title { color:#888; font-size:0.85rem; margin-bottom:12px; }
+.modal-links-title i { color:#FA5700; margin-right:6px; }
+.modal-link-btn {
+    display:inline-flex; align-items:center; gap:8px;
+    background:#1a1a1a; color:#e0e0e0; text-decoration:none;
+    padding:9px 18px; border-radius:8px; font-size:0.88rem; font-weight:500;
+    margin:0 8px 8px 0; border:1px solid #3d3d3d;
+    transition:all .25s;
+}
+.modal-link-btn:hover { border-color:#FA5700; color:#FA5700; transform:translateY(-2px); }
+.modal-link-btn i { font-size:1rem; color:#FA5700; }
+.modal-link-img { border-color:rgba(250,87,0,0.3); }
+
+/* ── Contacto: icono de copiar ── */
+.contact-item { position:relative; }
+.contact-item::after {
+    content:'\f0c5'; font-family:'Font Awesome 6 Free'; font-weight:900;
+    position:absolute; right:12px; top:50%; transform:translateY(-50%);
+    color:#555; font-size:0.8rem; transition:color .2s;
+}
+.contact-item:hover::after { color:#FA5700; }
+
+/* ── Toast de copiado ── */
+#copy-toast {
+    position:fixed; bottom:30px; left:50%; transform:translateX(-50%) translateY(20px);
+    background:#FA5700; color:#fff; padding:12px 24px; border-radius:30px;
+    font-size:0.9rem; font-weight:600; opacity:0;
+    transition:opacity .3s, transform .3s; z-index:9999; pointer-events:none;
+}
+#copy-toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+
+/* ── Responsive servicios ── */
+@media (max-width:768px) {
+    .servicioss-grid { grid-template-columns:1fr; }
 }
